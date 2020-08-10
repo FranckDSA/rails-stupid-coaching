@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>The Stupid Coach</h2>
+  <div class="card w-75">
+    <h1> <%= "#{@answer}" %></h1>
+    <p> <%= "-You" %></p>
+  </div>
+  <% if @answer ==  "I am going to work"%>
+    <div class="card w-75">
+      <h1>Great!</h1>
+      <p>-Stupid Coach</p>
+    </div>
+  <% elsif @answer.include?("?")%>
+    <div class="card w-75">
+      <h1>Silly question, get dressed and go to work!</h1>
+      <p>-Stupid Coach</p>
+    </div>
+  <% else %>
+    <div class="card w-75">
+      <h1>I don't care, get dressed and go to work!</h1>
+      <p>-Stupid Coach</p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "AskPage", ask_path %>
+
